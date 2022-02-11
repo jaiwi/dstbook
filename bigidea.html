@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Welcome to your Jupyter Book &#8212; Data Storytelling</title>
+    <title>Big idea &#8212; Wiki Loves Broadcast</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,7 +51,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Markdown Files" href="markdown.html" />
+    <link rel="next" title="Daten" href="data.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -74,10 +74,10 @@
         
       
       
-      <img src="_static/logo.png" class="logo" alt="logo">
+      <img src="_static/WikiLovesBroadcast-5.svg" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">Data Storytelling</h1>
+      <h1 class="site-logo" id="site-title">Wiki Loves Broadcast</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
@@ -88,19 +88,49 @@
         <ul class="nav bd-sidenav">
  <li class="toctree-l1 current">
   <a class="reference internal" href="#">
-   Welcome to your Jupyter Book
+   Big idea
   </a>
  </li>
 </ul>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="markdown.html">
-   Markdown Files
+  <a class="reference internal" href="data.html">
+   Daten
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="notebooks.html">
-   Content with notebooks
+  <a class="reference internal" href="design.html">
+   Design
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="line_plot.html">
+   Liniendiagramm
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="pie_plot.html">
+   Tortendiagramm
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="sunburst_plot.html">
+   Sunburst-Diagramm
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="bar_plot.html">
+   Balkendiagramm
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="dash.html">
+   Dashboard
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="sources.html">
+   Quellen
   </a>
  </li>
 </ul>
@@ -144,7 +174,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/intro.md"><button type="button"
+        <a class="dropdown-buttons" href="_sources/bigidea.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -164,7 +194,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fbigidea.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -185,6 +215,63 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#who-is-your-audience">
+   Who is your audience?
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#list-the-primary-groups-or-individuals-to-whom-you-ll-be-communicating">
+     List the primary groups or individuals to whom you’ll be communicating
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#if-you-had-to-narrow-that-to-a-single-person-who-would-that-be">
+     If you had to narrow that to a single person, who would that be?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-does-your-audience-care-about">
+     What does your audience care about?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-action-does-your-audience-need-to-take">
+     What action does your audience need to take?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-at-stake">
+   What is at stake?
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-are-the-benefits-if-your-audience-acts-in-the-way-that-you-want-them-to">
+     What are the benefits if your audience acts in the way that you want them to?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-are-the-risks-if-they-do-not">
+     What are the risks if they do not?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#form-your-big-idea">
+   Form your big idea
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -193,19 +280,62 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="welcome-to-your-jupyter-book">
-<h1>Welcome to your Jupyter Book<a class="headerlink" href="#welcome-to-your-jupyter-book" title="Permalink to this headline">¶</a></h1>
-<p>This is a small sample book to give you a feel for how book content is
-structured.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Here is a note!</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="big-idea">
+<h1>Big idea<a class="headerlink" href="#big-idea" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="who-is-your-audience">
+<h2>Who is your audience?<a class="headerlink" href="#who-is-your-audience" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="list-the-primary-groups-or-individuals-to-whom-you-ll-be-communicating">
+<h3>List the primary groups or individuals to whom you’ll be communicating<a class="headerlink" href="#list-the-primary-groups-or-individuals-to-whom-you-ll-be-communicating" title="Permalink to this headline">¶</a></h3>
+<p>In öffentlich-rechtlichen Rundfunkanstalten:</p>
+<ul class="simple">
+<li><p>Verantwortliche in der Medienproduktion: Welche Inhalte werden über welche Angebote bereitgestellt?</p></li>
+<li><p>Ansprechperson für die Lizenzierung von Inhalten an Externe</p></li>
+<li><p>Falls vorhanden: Ansprechperson für offene Lizenzen/Nachnutzung von Inhalten in Bildungskontexten</p></li>
+</ul>
 </div>
-<p>And here is a code block:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">e</span> <span class="o">=</span> <span class="n">mc</span><span class="o">^</span><span class="mi">2</span>
-</pre></div>
+<div class="section" id="if-you-had-to-narrow-that-to-a-single-person-who-would-that-be">
+<h3>If you had to narrow that to a single person, who would that be?<a class="headerlink" href="#if-you-had-to-narrow-that-to-a-single-person-who-would-that-be" title="Permalink to this headline">¶</a></h3>
+<p>Ansprechperson für offene Lizenzen</p>
 </div>
-<p>Check out the content pages bundled with this sample book to see more.</p>
+<div class="section" id="what-does-your-audience-care-about">
+<h3>What does your audience care about?<a class="headerlink" href="#what-does-your-audience-care-about" title="Permalink to this headline">¶</a></h3>
+<p>Vorausgesetzt, ein Interesse an einer Zugänglichmachung von Inhalten unter einer offenen Lizenz existiert:</p>
+<ul class="simple">
+<li><p>Nutzungszahlen: Ist der personelle/eventuell darüberhinausgehende finanzielle Aufwand vertretbar?</p></li>
+<li><p>Rechtliche Absicherung: Ist letztendlich Entscheidung der jeweiligen Rechtsabteilung, Erfolg mit ZDF zeigt aber grundsätzliche Machbarkeit</p></li>
+</ul>
+</div>
+<div class="section" id="what-action-does-your-audience-need-to-take">
+<h3>What action does your audience need to take?<a class="headerlink" href="#what-action-does-your-audience-need-to-take" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Interne Überprüfung, welche Inhalte für eine Veröffentlichung unter einer offenen Lizenz geeignet sind (Urheber-/Lizenzrecht beachten)</p></li>
+<li><p>In zukünftigen Verträgen bei Medienproduktionen die Möglichkeit einer Nachnutzung unter offener Lizenz berücksichtigen</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="what-is-at-stake">
+<h2>What is at stake?<a class="headerlink" href="#what-is-at-stake" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="what-are-the-benefits-if-your-audience-acts-in-the-way-that-you-want-them-to">
+<h3>What are the benefits if your audience acts in the way that you want them to?<a class="headerlink" href="#what-are-the-benefits-if-your-audience-acts-in-the-way-that-you-want-them-to" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Fundus an für Artikel verwendbarem Bild- und Videomaterial wächst</p></li>
+<li><p>Hochwertige Medienproduktionen verschwinden nicht in den Archiven der Sender, sondern bleiben unkompliziert zugänglich und nachnutzbar, z.B. im Schulunterricht</p></li>
+</ul>
+</div>
+<div class="section" id="what-are-the-risks-if-they-do-not">
+<h3>What are the risks if they do not?<a class="headerlink" href="#what-are-the-risks-if-they-do-not" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Für Wikipedia/Wikimedia ist kein materieller Schaden zu befürchten</p></li>
+<li><p>Ideeller Rückschlag: Eine Option weniger, mit guten visuellen Materialien Wissen vermitteln zu können</p></li>
+<li><p>Fortführung einer suboptimalen Praxis zur Nachnutzung von öffentlich-rechtlichen Inhalten</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="form-your-big-idea">
+<h2>Form your big idea<a class="headerlink" href="#form-your-big-idea" title="Permalink to this headline">¶</a></h2>
+<p><em>Freie Inhalte zur Unterstützung der Vermittlung freien Wissens.</em></p>
+<p>Die Betonung liegt auf <em>Unterstützung</em>: Medieninhalte sind ein Zusatz, sie ersetzen nicht das Schreiben von Artikeln durch die Community.</p>
+</div>
 <div class="toctree-wrapper compound">
 </div>
 </div>
@@ -240,10 +370,10 @@ structured.</p>
 <div class='prev-next-bottom'>
     
      <div id="next">
-        <a class="right-next" href="markdown.html" title="next page">
+        <a class="right-next" href="data.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Markdown Files</p>
+                <p class="prevnext-title">Daten</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>

@@ -1,0 +1,566 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Liniendiagramm &#8212; Wiki Loves Broadcast</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Tortendiagramm" href="pie_plot.html" />
+    <link rel="prev" title="Design" href="design.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/WikiLovesBroadcast-5.svg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Wiki Loves Broadcast</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="bigidea.html">
+   Big idea
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="data.html">
+   Daten
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="design.html">
+   Design
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Liniendiagramm
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="pie_plot.html">
+   Tortendiagramm
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="sunburst_plot.html">
+   Sunburst-Diagramm
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="bar_plot.html">
+   Balkendiagramm
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="dash.html">
+   Dashboard
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="sources.html">
+   Quellen
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/line_plot.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fline_plot.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mapping-py-am-beispiel-bundeskanzler-deutschland">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     mapping.py
+    </span>
+   </code>
+   am Beispiel
+   <em>
+    Bundeskanzler (Deutschland)
+   </em>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#terrax-ipynb">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     terrax.ipynb
+    </span>
+   </code>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#daten">
+     Daten
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#layout">
+     Layout
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#diagramm">
+     Diagramm
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#textelemente">
+     Textelemente
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#diagrammspezifische-annotationen">
+     Diagrammspezifische Annotationen
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="liniendiagramm">
+<h1>Liniendiagramm<a class="headerlink" href="#liniendiagramm" title="Permalink to this headline">¶</a></h1>
+<p>Um das Generieren mehrerer Liniendiagramme zu vereinfachen, enthält <code class="docutils literal notranslate"><span class="pre">mapping.py</span></code> zwei Dictionaries mit jeweils einem Eintrag per Diagramm: <code class="docutils literal notranslate"><span class="pre">data</span></code> verfügt über die Daten für die allgemeinen Textelemente und den anzuzeigenden Zeitraum. In <code class="docutils literal notranslate"><span class="pre">display</span></code> sind für jede Linie Farben und Stärke festgelegt sowie individuelle Annotationen hinterlegt.</p>
+<div class="section" id="mapping-py-am-beispiel-bundeskanzler-deutschland">
+<h2><code class="docutils literal notranslate"><span class="pre">mapping.py</span></code> am Beispiel <em>Bundeskanzler (Deutschland)</em><a class="headerlink" href="#mapping-py-am-beispiel-bundeskanzler-deutschland" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sourcetext</span> <span class="o">=</span> <span class="s2">&quot;Video- und Artikelabrufstatistiken via &lt;a href=&#39;https://pageviews.toolforge.org&#39;&gt;pageviews.toolforge.org&lt;/a&gt; |&quot;</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;bu&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;media&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;DE&quot;</span><span class="p">:</span> <span class="s2">&quot;Bundeskanzler (Deutschland)&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Thema: Bundeskanzler*in&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;a href=&#39;https://commons.wikimedia.org/wiki/File:Was_macht_ein*e_Bundeskanzler*in</span><span class="si">%3F</span><span class="s2">.webm&#39; style=&#39;color:#A2A9B1&#39;&gt;Zum Video&lt;/a&gt; | Was macht ein*e Bundeskanzler*in?&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;startdate&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-08-15&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;stopdate&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-12-31&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;sourcetext&quot;</span><span class="p">:</span> <span class="n">sourcetext</span><span class="p">,</span>
+    <span class="p">},</span>  
+<span class="p">}</span>
+
+<span class="n">display</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;br&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;DE&quot;</span> <span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;show&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+            <span class="s2">&quot;color&quot;</span><span class="p">:</span> <span class="n">color</span><span class="o">.</span><span class="n">ACCENT50</span><span class="p">,</span>
+            <span class="s2">&quot;width&quot;</span><span class="p">:</span> <span class="n">color</span><span class="o">.</span><span class="n">ARTICLE_TRACE_WIDTH</span><span class="p">,</span>
+            <span class="s2">&quot;rank&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;annotations&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;x&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-09-25&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;y&quot;</span><span class="p">:</span> <span class="mi">4500</span><span class="p">,</span>
+                <span class="s2">&quot;xanchor&quot;</span><span class="p">:</span> <span class="s2">&quot;right&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;text&quot;</span><span class="p">:</span> <span class="s2">&quot;Bundestagswahl&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;font&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="mi">18</span><span class="p">},</span>
+                <span class="s2">&quot;showarrow&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">],</span>  
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="terrax-ipynb">
+<h2><code class="docutils literal notranslate"><span class="pre">terrax.ipynb</span></code><a class="headerlink" href="#terrax-ipynb" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="daten">
+<h3>Daten<a class="headerlink" href="#daten" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">plotly.graph_objs</span> <span class="k">as</span> <span class="nn">go</span>
+
+<span class="kn">import</span> <span class="nn">color</span>
+<span class="kn">import</span> <span class="nn">mapping</span>
+
+<span class="c1"># Variablen</span>
+<span class="n">ABB</span> <span class="o">=</span> <span class="s2">&quot;btw21-0810&quot;</span>  <span class="c1"># br, btw21-0810, bu, ca, ka,</span>
+<span class="n">MEDIA_TOGGLE</span> <span class="o">=</span> <span class="n">mapping</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">ABB</span><span class="p">][</span><span class="s2">&quot;media&quot;</span><span class="p">]</span>
+
+<span class="c1"># Einlesen</span>
+<span class="n">rawdf</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;../data/</span><span class="si">{</span><span class="n">ABB</span><span class="si">}</span><span class="s2">.csv&quot;</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">])</span>
+
+<span class="c1"># Zeitfenster</span>
+<span class="n">timedf</span> <span class="o">=</span> <span class="n">rawdf</span><span class="p">[(</span><span class="n">rawdf</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">mapping</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">ABB</span><span class="p">][</span><span class="s2">&quot;startdate&quot;</span><span class="p">])</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">rawdf</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">mapping</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">ABB</span><span class="p">][</span><span class="s2">&quot;stopdate&quot;</span><span class="p">])]</span>
+
+<span class="c1"># Medienaufrufe</span>
+<span class="k">if</span> <span class="n">MEDIA_TOGGLE</span><span class="p">:</span>
+    <span class="n">articledf</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;Media&quot;</span><span class="p">})</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">articledf</span> <span class="o">=</span> <span class="n">df</span>
+<span class="n">articledf_columns</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">articledf</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+<span class="n">articledf_columns</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Die Datumsangaben werden als <code class="docutils literal notranslate"><span class="pre">datetime</span></code>-Objekte gespeichert, um später unter anderem die Ausgabe von Monatsnamen anstatt von Zahlen zu ermöglichen. Leider ist dies nur auf Englisch möglich, da eine potentielle Lösung für deutsche Bezeichnungen unter Zuhilfenahme des <code class="docutils literal notranslate"><span class="pre">locale</span></code>-Moduls die Datumsangaben als String ausgibt.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">locale</span><span class="o">.</span><span class="n">setlocale</span><span class="p">(</span><span class="n">locale</span><span class="o">.</span><span class="n">LC_TIME</span><span class="p">,</span> <span class="s2">&quot;de_DE&quot;</span><span class="p">)</span>
+<span class="n">date_series</span> <span class="o">=</span> <span class="n">timedf</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">]</span>
+<span class="n">date_series</span> <span class="o">=</span> <span class="p">[</span><span class="n">item</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%d</span><span class="s2"> %B %Y&quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">date_series</span><span class="p">]</span>
+<span class="n">timedf</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">date_series</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="layout">
+<h3>Layout<a class="headerlink" href="#layout" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">layout</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Layout</span><span class="p">(</span>
+    <span class="n">plot_bgcolor</span><span class="o">=</span><span class="n">color</span><span class="o">.</span><span class="n">PLOT_BGCOLOR</span><span class="p">,</span>
+    <span class="n">paper_bgcolor</span><span class="o">=</span><span class="n">color</span><span class="o">.</span><span class="n">PAPER_BGCOLOR</span><span class="p">,</span>
+    <span class="n">showlegend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">xaxis</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;showgrid&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;showline&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="s2">&quot;linecolor&quot;</span><span class="p">:</span> <span class="n">color</span><span class="o">.</span><span class="n">AXIS_COLOR</span><span class="p">,</span>
+        <span class="s2">&quot;ticklabelmode&quot;</span><span class="p">:</span> <span class="s2">&quot;instant&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;tickformatstops&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span><span class="s2">&quot;dtickrange&quot;</span><span class="p">:</span> <span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="mi">604800000</span><span class="p">],</span> <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;</span><span class="si">%e</span><span class="s2">. %B&quot;</span><span class="p">},</span>
+            <span class="p">{</span><span class="s2">&quot;dtickrange&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">604800000</span><span class="p">,</span> <span class="s2">&quot;M1&quot;</span><span class="p">],</span> <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;</span><span class="si">%e</span><span class="s2">. %B&quot;</span><span class="p">},</span>
+            <span class="p">{</span><span class="s2">&quot;dtickrange&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;M1&quot;</span><span class="p">,</span> <span class="s2">&quot;M12&quot;</span><span class="p">],</span> <span class="s2">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;%B&quot;</span><span class="p">}</span>
+            <span class="p">]</span>
+        <span class="p">},</span>
+    <span class="n">yaxis</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;showgrid&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;showline&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;gridcolor&quot;</span><span class="p">:</span> <span class="n">color</span><span class="o">.</span><span class="n">GRID_COLOR</span><span class="p">,</span>
+        <span class="s2">&quot;linecolor&quot;</span><span class="p">:</span> <span class="n">color</span><span class="o">.</span><span class="n">AXIS_COLOR</span><span class="p">,</span>
+        <span class="s2">&quot;zeroline&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="s2">&quot;zerolinecolor&quot;</span><span class="p">:</span> <span class="n">color</span><span class="o">.</span><span class="n">AXIS_COLOR</span><span class="p">,</span>
+        <span class="s2">&quot;zerolinewidth&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;fixedrange&quot;</span><span class="p">:</span> <span class="kc">True</span>
+        <span class="p">},</span>
+    <span class="n">hovermode</span><span class="o">=</span><span class="s2">&quot;x unified&quot;</span><span class="p">,</span>
+    <span class="n">font</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;family&quot;</span><span class="p">:</span> <span class="n">color</span><span class="o">.</span><span class="n">PRIMARY_FONT</span><span class="p">,</span> <span class="s2">&quot;color&quot;</span><span class="p">:</span> <span class="n">color</span><span class="o">.</span><span class="n">AXIS_COLOR</span><span class="p">},</span>
+    <span class="n">width</span><span class="o">=</span><span class="mi">1366</span><span class="p">,</span>
+    <span class="n">height</span><span class="o">=</span><span class="mi">768</span><span class="p">,</span>
+    <span class="n">legend</span><span class="o">=</span><span class="p">{</span>
+        <span class="s2">&quot;x&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;y&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;xanchor&quot;</span><span class="p">:</span> <span class="s2">&quot;left&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;yanchor&quot;</span><span class="p">:</span> <span class="s2">&quot;bottom&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;orientation&quot;</span><span class="p">:</span> <span class="s2">&quot;h&quot;</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>Die Angaben in <code class="docutils literal notranslate"><span class="pre">tickfromatstops</span></code> passen je nach angezeigtem Diagrammausschnitt die Anzahl und Formattierung der Ticks der X-Achse an.</p>
+<p>Das Seitenverhältnis ist mit 16:9 fest vorgegeben. Dies ermöglicht die unkomplizierte Integration von Annotationen, welche bei einem abweichenden Seitenverhältnis verschoben würden. Da die Diagramme grundsätzlich als SVG-Dateien ausgegeben werden können, ist die Festlegung einer spezifischen Auflösung unkompliziert.</p>
+<p><code class="docutils literal notranslate"><span class="pre">fixedrange=True</span></code> behält bei der Auswahl eines Diagrammausschnitts die Diemensionen der Y-Achse bei.</p>
+<p><code class="docutils literal notranslate"><span class="pre">hovermode=&quot;x</span> <span class="pre">unified&quot;</span></code> blendet beim Schweben über das Diagramm eine vertikale Linie sowie eine Anzeige der Y-Koordinaten der einzelnen Linien ein.</p>
+</div>
+<div class="section" id="diagramm">
+<h3>Diagramm<a class="headerlink" href="#diagramm" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">line</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">(</span><span class="n">layout</span><span class="o">=</span><span class="n">layout</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">MEDIA_TOGGLE</span><span class="p">:</span>
+    <span class="n">line</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span>
+        <span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span>
+            <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;lines&quot;</span><span class="p">,</span>
+            <span class="n">x</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">],</span>
+            <span class="n">y</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Media&quot;</span><span class="p">],</span>
+            <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Video&quot;</span><span class="p">,</span>
+            <span class="n">legendrank</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+            <span class="n">legendgroup</span><span class="o">=</span><span class="s2">&quot;Video&quot;</span><span class="p">,</span>
+            <span class="n">line</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;color&quot;</span><span class="p">:</span> <span class="n">color</span><span class="o">.</span><span class="n">MEDIA_COLOR</span><span class="p">,</span> <span class="s2">&quot;shape&quot;</span><span class="p">:</span> <span class="s2">&quot;spline&quot;</span><span class="p">,</span> <span class="s2">&quot;smoothing&quot;</span><span class="p">:</span> <span class="mf">0.75</span><span class="p">,</span> <span class="s2">&quot;width&quot;</span><span class="p">:</span> <span class="n">color</span><span class="o">.</span><span class="n">MEDIA_TRACE_WIDTH</span><span class="p">}</span>
+        <span class="p">)</span>
+    <span class="p">)</span>
+
+<span class="k">for</span> <span class="n">acount</span><span class="p">,</span> <span class="n">article</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">articledf_columns</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">mapping</span><span class="o">.</span><span class="n">display</span><span class="p">[</span><span class="n">ABB</span><span class="p">][</span><span class="n">article</span><span class="p">][</span><span class="s2">&quot;show&quot;</span><span class="p">]:</span>
+        <span class="n">line</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span>
+            <span class="n">go</span><span class="o">.</span><span class="n">Scatter</span><span class="p">(</span>
+                <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;lines&quot;</span><span class="p">,</span>
+                <span class="n">x</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">],</span>
+                <span class="n">y</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="n">article</span><span class="p">],</span>
+                <span class="n">name</span><span class="o">=</span><span class="n">mapping</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">ABB</span><span class="p">][</span><span class="n">article</span><span class="p">],</span>
+                <span class="n">legendrank</span><span class="o">=</span><span class="n">mapping</span><span class="o">.</span><span class="n">display</span><span class="p">[</span><span class="n">ABB</span><span class="p">][</span><span class="n">article</span><span class="p">][</span><span class="s2">&quot;rank&quot;</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span>
+                <span class="n">legendgroup</span><span class="o">=</span><span class="n">article</span><span class="p">,</span>
+                <span class="n">line</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;color&quot;</span><span class="p">:</span> <span class="n">mapping</span><span class="o">.</span><span class="n">display</span><span class="p">[</span><span class="n">ABB</span><span class="p">][</span><span class="n">article</span><span class="p">][</span><span class="s2">&quot;color&quot;</span><span class="p">],</span> <span class="s2">&quot;shape&quot;</span><span class="p">:</span> <span class="s2">&quot;spline&quot;</span><span class="p">,</span> <span class="s2">&quot;smoothing&quot;</span><span class="p">:</span> <span class="mf">0.75</span><span class="p">,</span> <span class="s2">&quot;width&quot;</span><span class="p">:</span> <span class="n">mapping</span><span class="o">.</span><span class="n">display</span><span class="p">[</span><span class="n">ABB</span><span class="p">][</span><span class="n">article</span><span class="p">][</span><span class="s2">&quot;width&quot;</span><span class="p">],}</span>
+            <span class="p">)</span>
+        <span class="p">)</span>
+</pre></div>
+</div>
+<p>Jede Linie wird in ihre eigene <code class="docutils literal notranslate"><span class="pre">legendgroup</span></code> eingebunden, da Plotly nicht die horizontale Anordnung deren einzelner Elemente unterstützt.</p>
+</div>
+<div class="section" id="textelemente">
+<h3>Textelemente<a class="headerlink" href="#textelemente" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">line</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">annotations</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">go</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">Annotation</span><span class="p">(</span>
+        <span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">1.1</span><span class="p">,</span> <span class="n">xref</span><span class="o">=</span><span class="s2">&quot;paper&quot;</span><span class="p">,</span> <span class="n">yref</span><span class="o">=</span><span class="s2">&quot;paper&quot;</span><span class="p">,</span> <span class="n">xanchor</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">,</span> <span class="n">yanchor</span><span class="o">=</span><span class="s2">&quot;bottom&quot;</span><span class="p">,</span> <span class="n">showarrow</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">font</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="mi">36</span><span class="p">,</span> <span class="s2">&quot;color&quot;</span><span class="p">:</span> <span class="n">color</span><span class="o">.</span><span class="n">PRIMARY_FONT_COLOR</span><span class="p">,</span> <span class="s2">&quot;family&quot;</span><span class="p">:</span> <span class="n">color</span><span class="o">.</span><span class="n">PRIMARY_FONT</span><span class="p">},</span>
+        <span class="n">text</span><span class="o">=</span><span class="n">mapping</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">ABB</span><span class="p">][</span><span class="s2">&quot;title&quot;</span><span class="p">],</span>
+    <span class="p">),</span>
+    <span class="n">go</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">Annotation</span><span class="p">(</span>
+        <span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">1.05</span><span class="p">,</span> <span class="n">xref</span><span class="o">=</span><span class="s2">&quot;paper&quot;</span><span class="p">,</span> <span class="n">yref</span><span class="o">=</span><span class="s2">&quot;paper&quot;</span><span class="p">,</span> <span class="n">xanchor</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">,</span> <span class="n">yanchor</span><span class="o">=</span><span class="s2">&quot;bottom&quot;</span><span class="p">,</span> <span class="n">showarrow</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">font</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span> <span class="s2">&quot;color&quot;</span><span class="p">:</span> <span class="n">color</span><span class="o">.</span><span class="n">SECONDARY_FONT_COLOR</span><span class="p">,</span> <span class="s2">&quot;family&quot;</span><span class="p">:</span> <span class="n">color</span><span class="o">.</span><span class="n">SECONDARY_FONT</span><span class="p">},</span>
+        <span class="n">text</span><span class="o">=</span><span class="n">mapping</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">ABB</span><span class="p">][</span><span class="s2">&quot;description&quot;</span><span class="p">],</span>
+    <span class="p">),</span>
+    <span class="n">go</span><span class="o">.</span><span class="n">layout</span><span class="o">.</span><span class="n">Annotation</span><span class="p">(</span>
+        <span class="n">x</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">y</span><span class="o">=-</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">xref</span><span class="o">=</span><span class="s2">&quot;paper&quot;</span><span class="p">,</span> <span class="n">yref</span><span class="o">=</span><span class="s2">&quot;paper&quot;</span><span class="p">,</span> <span class="n">xanchor</span><span class="o">=</span><span class="s2">&quot;right&quot;</span><span class="p">,</span> <span class="n">yanchor</span><span class="o">=</span><span class="s2">&quot;bottom&quot;</span><span class="p">,</span> <span class="n">showarrow</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">font</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;size&quot;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span> <span class="s2">&quot;color&quot;</span><span class="p">:</span> <span class="n">color</span><span class="o">.</span><span class="n">SECONDARY_FONT_COLOR</span><span class="p">,</span> <span class="s2">&quot;family&quot;</span><span class="p">:</span> <span class="n">color</span><span class="o">.</span><span class="n">PRIMARY_FONT</span><span class="p">},</span>
+        <span class="n">text</span><span class="o">=</span><span class="n">mapping</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">ABB</span><span class="p">][</span><span class="s2">&quot;sourcetext&quot;</span><span class="p">],</span>
+    <span class="p">),</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="diagrammspezifische-annotationen">
+<h3>Diagrammspezifische Annotationen<a class="headerlink" href="#diagrammspezifische-annotationen" title="Permalink to this headline">¶</a></h3>
+<p>Properties für <code class="docutils literal notranslate"><span class="pre">go.Figure.add_vline()</span></code> müssen leider im Skript hinterlegt werden, da die Auslagerung von <code class="docutils literal notranslate"><span class="pre">x</span></code> nach <code class="docutils literal notranslate"><span class="pre">mapping.py</span></code> Schwierigkeiten bereitet.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">anno</span> <span class="ow">in</span> <span class="n">mapping</span><span class="o">.</span><span class="n">display</span><span class="p">[</span><span class="n">ABB</span><span class="p">][</span><span class="s2">&quot;annotations&quot;</span><span class="p">]:</span>
+    <span class="n">line</span><span class="o">.</span><span class="n">add_annotation</span><span class="p">(</span><span class="n">anno</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">ABB</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;br&quot;</span><span class="p">,</span> <span class="s2">&quot;btw21-0810&quot;</span><span class="p">,</span> <span class="s2">&quot;bu&quot;</span><span class="p">]:</span>
+    <span class="n">line</span><span class="o">.</span><span class="n">add_vline</span><span class="p">(</span>
+        <span class="n">x</span><span class="o">=</span><span class="s2">&quot;2021-09-26&quot;</span><span class="p">,</span>
+        <span class="n">line_width</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+        <span class="n">line_dash</span><span class="o">=</span><span class="s2">&quot;dash&quot;</span><span class="p">,</span>
+        <span class="n">line_color</span><span class="o">=</span><span class="n">color</span><span class="o">.</span><span class="n">AXIS_COLOR</span><span class="p">,</span>
+    <span class="p">)</span>
+<span class="k">if</span> <span class="n">ABB</span> <span class="o">==</span> <span class="s2">&quot;bu&quot;</span><span class="p">:</span>
+    <span class="n">line</span><span class="o">.</span><span class="n">add_vline</span><span class="p">(</span>
+        <span class="n">x</span><span class="o">=</span><span class="s2">&quot;2021-12-08&quot;</span><span class="p">,</span>
+        <span class="n">line_width</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+        <span class="n">line_dash</span><span class="o">=</span><span class="s2">&quot;dash&quot;</span><span class="p">,</span>
+        <span class="n">line_color</span><span class="o">=</span><span class="n">color</span><span class="o">.</span><span class="n">AXIS_COLOR</span><span class="p">,</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+<p>Ausgabe des Diagramms als SVG-Datei. Für den Export statistischer Bilder wurde zusätzlich <code class="docutils literal notranslate"><span class="pre">kaleido</span></code> installiert.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">line</span><span class="o">.</span><span class="n">write_image</span><span class="p">(</span><span class="s2">&quot;../export/line_btw21-0810.svg&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><img alt="Liniendiagramm Bundestagswahl 2021" src="_images/line_btw21-0810.svg" /></p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="design.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Design</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="pie_plot.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Tortendiagramm</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By Jonas Wüstner<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
